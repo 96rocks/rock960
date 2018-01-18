@@ -1,25 +1,23 @@
-# Using the Board-x
+# Using the ROCK960
 
-A comprehensive guide to using the [Board-x](96Boards.org product link here) Consumer Edition development board. This guide is written by the [96Boards](https://www.96boards.org) team at [Linaro](http://www.linaro.org) with community contributions and links to third-party content.
+A comprehensive guide to using the [ROCK960](https://www.96boards.org/product/rock960/) Consumer Edition development board. This guide is written by [Vamrs](https://vamrs.com) and the [96Boards](https://www.96boards.org) team at [Linaro](http://www.linaro.org) with community contributions and links to third-party content.
 
 ## Software
 
-- [Downloads](downloads/README.md)
-   - Already familiar with your 96Boards? Skip the board bring up sections and go straight to your download!
-- [Installation](installation/README.md)
-   - Choose and install an operating system on your Board-x
-- [Build from Source](build/README.md)
+- [Installation](Installation/)
+   - Choose and install an operating system on your ROCK960
+- [Downloads](Downloads/)
+   - This page provides links to the latest pre-built software downloads
+- [Build from Source](BuildSource/)
    - Instructions for building and flashing the components of your favorite operating systems
 
-## Documenation
+## Documentation
 
-- [Getting Started](getting-started/README.md)
-   - Learn about your Board-x board, how to prepare and set up for basic use
-- [Useful Guides](guides/README.md)
-   - These guides will help to get you started with a variety of available on-boards software
-- [Hardware Documentation](hardware-docs/README.md)
-   - Explore what makes your Board-x unique, technical specifications, schematics, hardware notes and more...
-- [Support](support/README.md)
-   - From bug reports and current issues, to forum access and other useful resources, we want to help you find answers
+- [Getting Started](GettingStarted/)
+   - Learn about your ROCK960 board, how to prepare and set up for basic use
+- [Vendor Documentation](HardwareDocs/)
+   - Explore what makes your ROCK960 unique, technical specifications, schematics, hardware notes and more...
+- [Support](Support/)
+   - From bug reports and current issues, to forum access and other useful resources, we want to help you find answers.
 
 ***
