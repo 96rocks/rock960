@@ -1,6 +1,6 @@
-## Mac OS X Host
+## macOS Host
 
-This section show how to install an operating system to your Helio X20 using the SD Card method on a Mac OS X host computer.
+This section show how to install an operating system to your ROCK960 using the SD Card method on a macOS host computer.
 ***
 
 - **Step 1**: Prepare MicroSD card
@@ -10,8 +10,8 @@ This section show how to install an operating system to your Helio X20 using the
 - **Step 5**: Go to directory with _SD Card Install Image_ folder using Terminal
 - **Step 6**: Locate SD Card Install Image
 - **Step 7**: Install Image onto SD Card
-- **Step 8**: Prepare Helio X20 with SD card
-- **Step 9**: Install image onto Helio X20
+- **Step 8**: Prepare ROCK960 with SD card
+- **Step 9**: Install image onto ROCK960
 
 ***
 
@@ -44,9 +44,10 @@ diskutil list
 ####**Step 4**: Unzip _SD Card Install Image_
 
 - Uncompress or unzip the _SD Card Install Image_ . With Mac OS X, you can use the Finder app to locate the file and then double click to automatically unzip the file.
-- When unzipped, a folder (ex: heliox20_sdcard_install_debian-83) will be created with the following contents:
-   - An install Image (.img) (ex: db410c_sd_install_debian.img)
-   - Readme or license.txt
+- When unzipped, a folder (ex: rock960_ubuntu_server_16.04_arm64_20180115) will be created with the following contents:
+   - Loader (rk3399_loader_v1.08.106.bin) we don't need it for SD card writing here.
+   - An install Image (system.img) (ex: rock960_ubuntu_server_16.04_arm64_20180115.img)
+   - readme.md
 
 ####**Step 5**: Go to directory with _SD Card Install Image_ folder using Terminal
 
@@ -72,18 +73,18 @@ cd /Users/YourUserName/Downloads
 ls
 
 #output
-heliox20_sdcard_install_Y-XX
+rock960_ubuntu_server_16.04_arm64_20180115
 ```
 
-- Unzipped folder should be called heliox20_sdcard_install_Y-XX, where Y can be Android or Debian and XX represents the release number
+- Unzipped folder should be called rock960_YY_arm64_XX, where Y can be Android or Debian and XX represents the release number
 - `cd` into this directory
 
 ```shell
-cd heliox20_sdcard_install_Y-XX
+cd rock960_ubuntu_server_16.04_arm64_20180115
 ```
 
-- Inside this folder you will find the install image where Y is Android or Debian.
-   - `db410c_sd_install_Y.img`
+- Inside this folder you will find the install image.
+   - `system.img`
 - This `.img` file is what will be flashed or copied to your SD Card.
 
 ####**Step 7**: Flash Image onto SD Card
@@ -92,18 +93,18 @@ cd heliox20_sdcard_install_Y-XX
 
 - SD card inserted into host computer
 - Recall SD Card device name from [**Step 2**]()
-- From within the heliox20_sdcard_install_Y-XX folder, using the Terminal execute the following commands:
+- From within the `rock960_ubuntu_server_16.04_arm64_20180115` folder, using the Terminal execute the following commands:
 
 **Execute:**
 
 ```shell
-$ sudo dd if=db410c_sd_install_Y.img of=/dev/XXX bs=4m
+$ sudo dd if=system.img of=/dev/XXX bs=4m
 $ sudo sync
 ```
 
 **Note:**
 
-- `if=db410c_sd_install_Y.img`: should match the name of the image that was downloaded.
+- `if=system.img`: should match the name of the image that was downloaded.
 - `of=/dev/XXX`: XXX should match the name of the SD Card device name from **Step 2**. Be sure to use the device name without the partition name. For example, 'of=/dev/disk1'
 - If you get an error message "Resource Busy", you will need to unmount the SD card without removing it from the host computer. 
   - Option 1:
@@ -111,39 +112,22 @@ $ sudo sync
   - Click on the Disk Utility program to run it
   - Select the device that represents the SD card
   - Click on `unmount` and leave the SD card in the computer
-  - Retry the '$ sudo dd if=db410c_sd_install_Y.img of=/dev/XXX bs=4m'
+  - Retry the '$ sudo dd if=system.img of=/dev/XXX bs=4m'
   - Option 2:
   - In the terminal window, enter this command:
 ```shell
 $ sudo umount /dev/<device name>
 ```
-  
+
 - This command will take some time to execute. Be patient and avoid tampering with the terminal until process has ended.
-- Once SD card is done flashing, remove from host computer and set aside for **Step 8** You may see a popup window that tells you the device is _Not readable by the operating system_. Ignore the message and remove the MicroSD card from the host computer.
+- Once SD card is done flashing, remove from host computer and set aside for **Step 8** You may see a popup window that tells you the device is _Not readable by the operating system_. **Ignore the message** and remove the MicroSD card from the host computer.
 
-####**Step 8**: Prepare Helio X20 with SD card
+####**Step 8**: Prepare ROCK960 with SD card
 
-- Make sure Helio X20 is unplugged from power
-- Set S6 switch on Helio X20 to `0-1-0-0`, "SD Boot switch" should be set to "ON".
-   - Please see "1.1 Board Overview" on page 7 from [Helio X20 Hardware Manual]() if you cannot find S6
-- Connect an HDMI monitor to the Helio X20 with an HDMI cable, and power on the monitor
-- Plug a USB keyboard and/or mouse into either of the two USB connectors on the Helio X20
-- Insert the microSD card into the Helio X20
-- Plug power adaptor into Helio X20, wait for board to boot up.
+- Make sure ROCK960 is unplugged from power
+- Connect an HDMI monitor to the ROCK960 with an HDMI cable, and power on the monitor
+- Plug a USB keyboard and/or mouse into either of the two USB connectors on the ROCK960
+- Insert the microSD card into the ROCK960
+- Plug power adaptor into ROCK960, wait for board to boot up.
 
-####**Step 9**: Install image onto Helio X20
-
-<img src="http://i.imgur.com/F18wlgU.png" data-canonical-src="http://i.imgur.com/F18wlgU.png" width="400" height="250"/>
-
-- If **Steps 1 - 8** were followed correctly, the above screen should be visible from your Helio X20
-- Select the image to install and click “Install” (or type “i”). OS will be installed into the eMMC memory
-- This process can take a few minutes to complete
-- Upon completion, “Flashing has completed and OS has installed successfully....” message will appear.
-
-Before clicking "OK":
-
-- Remove the SD Card
-- Set S6 switch on Helio X20 to `0-0-0-0`, all switches should be set to "OFF"
-- Now click "OK" button and allow Helio X20 to reboot.
-
-**Congratulations! You are now booting your newly installed operating system directly from eMMC on the Helio X20!**
+**Congratulations! You are now booting your newly installed operating system on SD card on the ROCK960!**
