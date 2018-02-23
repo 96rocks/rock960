@@ -4,20 +4,20 @@ A comprehensive guide to using the [ROCK960](https://www.96boards.org/product/ro
 
 ## Software
 
-- [Installation](Installation/)
+- [Installation](installation/)
    - Choose and install an operating system on your ROCK960
-- [Downloads](Downloads/)
+- [Downloads](downloads/)
    - This page provides links to the latest pre-built software downloads
-- [Build from Source](BuildSource/)
+- [Build from Source](build/)
    - Instructions for building and flashing the components of your favorite operating systems
 
 ## Documentation
 
-- [Getting Started](GettingStarted/)
+- [Getting Started](getting-started/)
    - Learn about your ROCK960 board, how to prepare and set up for basic use
-- [Vendor Documentation](HardwareDocs/)
+- [Vendor Documentation](hardware-docs/)
    - Explore what makes your ROCK960 unique, technical specifications, schematics, hardware notes and more...
-- [Support](Support/)
+- [Support](support/)
    - From bug reports and current issues, to forum access and other useful resources, we want to help you find answers.
 
 ***
