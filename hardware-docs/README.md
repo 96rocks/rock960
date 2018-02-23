@@ -1,18 +1,17 @@
 # Hardware Documentation
 
-Explore what makes your Board-X unique, technical specifications, schematics, hardware notes and more... This page allows you to see what is under the "Board-X hood" by offering static documentation published directly from the board vendors.
+Explore what makes your ROCK960 unique, technical specifications, schematics, hardware notes and more... This page allows you to see what is under the "ROCK960 hood" by offering static documentation published directly from the board vendors.
 
 ## Hardware
 
-< Please upload the following to current folder or send to robert.wolff@linaro.org>
+[Hardware User Manual](hardware-user-manual.md)
 
-- BOM ([View]() / [Download]())
-- Schematics ([View]() / [Download]())
+- Schematics [Download](https://dl.vamrs.com/products/rock960/docs/hw/rock960_sch_v1.1.pdf)(.pdf)
+- BOM [Download](https://dl.vamrs.com/products/rock960/docs/hw/rock960_bom_v1.1.xls)(.xls)
+- 2D drawing [Download](https://dl.vamrs.com/products/rock960/docs/hw/rock960_2d_drawing_v1.1.dxf)(.dxf)
+- 3D model [Download](https://dl.vamrs.com/products/rock960/docs/hw/rock960_3d_model_v1.0.step.zip)(.stp)
 
-#### Board-X Processor documents
+#### Components datasheets
 
-< If these documents exist >
-
-- [Board-X Device Specification]()
-- [Board-X GPIO Pin Assignment]()
-- [Hardware Register Description for Board-X]()
+- RK3399 Technical Reference Manual part1 [Download](https://dl.vamrs.com/products/rock960/docs/hw/datasheets/Rockchip_RK3399TRM_V1.3_Part1.pdf)(.pdf)
+- RK3399 Technical Reference Manual part2 [Download](https://dl.vamrs.com/products/rock960/docs/hw/datasheets/Rockchip_RK3399TRM_V1.3_Part2.pdf)(.pdf)
