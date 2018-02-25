@@ -2,10 +2,9 @@
 
 These guides will help to get you started with a variety of available on-boards software
 
-## Debian
+## Useful guide
 
-Coming Soon...
+* [how to connect serial console](serial-console.md)
 
-## Android
 
-Coming Soon...
+## Android development tips
