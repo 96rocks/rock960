@@ -28,7 +28,7 @@ Connect the USB to TTL serial cable as below:
     TX     <---->    WHITE
     GND    <---->    BLACK
 
-<img src="../additional-docs/images/images-guides/serial-connection.jpg" data-canonical-src="" width="250" height="160" />
+<img src="../additional-docs/images/images-guides/serial-connection.jpg" data-canonical-src="" width="600" />
 
 **Warn**:
 *Don't connect the red wire.*
