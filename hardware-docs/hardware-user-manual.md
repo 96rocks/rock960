@@ -439,7 +439,7 @@ SYS_DCIN  Can serves as the board’s main power source or can receive power fro
 ### I2C {2/3} 
 
 - The 96Boards specification calls for two I2C interfaces to be present on the High Speed Expansion Connector. Both interfaces are optional unless a MIPI-CSI interface has been implemented. Then an I2C interface shall be implemented. 
-- The Helio X20 Development Board implementation supports two MIPI-CSI interfaces and therefore must support two I2C interfaces. For MIPI-CSI0 the companion I2C2 is routed directly from the RK3399 SoC. For MIPI-CSI1, the companion I2C is I2C3. Each of the I2C lines is pulled up to VIO18_PMU via 4.7K resistor.
+- The ROCK960 Board implementation supports two MIPI-CSI interfaces and therefore must support two I2C interfaces. For MIPI-CSI0 the companion I2C2 is routed directly from the RK3399 SoC. For MIPI-CSI1, the companion I2C is I2C3. Each of the I2C line's pull up can be set from RK3399 internally.
 
 ### SD/SPI 
 
